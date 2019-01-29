@@ -1,0 +1,39 @@
+模块“opencv库”。
+赋予“句柄”【私】以函数集“‘参数0’.so”。
+
+（
+imgname NULL则截屏
+tmplname
+
+ImreadModes
+IMREAD_UNCHANGED            = -1
+IMREAD_GRAYSCALE            = 0
+IMREAD_COLOR                = 1
+IMREAD_ANYDEPTH             = 2
+IMREAD_ANYCOLOR             = 4
+IMREAD_LOAD_GDAL            = 8
+IMREAD_REDUCED_GRAYSCALE_2  = 16
+IMREAD_REDUCED_COLOR_2      = 17
+IMREAD_REDUCED_GRAYSCALE_4  = 32
+IMREAD_REDUCED_COLOR_4      = 33
+IMREAD_REDUCED_GRAYSCALE_8  = 64
+IMREAD_REDUCED_COLOR_8      = 65
+IMREAD_IGNORE_ORIENTATION   = 128
+
+method:
+0: SQDIFF
+1: SQDIFF NORMED
+2: TM CCORR
+3: TM CCORR NORMED
+4: TM COEFF
+5: TM COEFF NORMED
+
+buf_fmt
+
+thickness 组成矩形的线条的粗细程度。取负值时（如 CV_FILLED）函数绘制填充了色彩的矩形。
+lineType
+rect_color_r
+rect_color_g 
+rect_color_b）
+函数“图中寻图” 以“match_tmpl__”、‘句柄’、“-c*-c*-i-i-B-c*-${l0}-${l0}-${l0}-${l0}-${l0}-${l0}”。
+函数“图中寻图2”以“match_tmpl__”、‘句柄’、“-c*-c*-i-i-B-c*-${l1}-i-i-i-i-i”。

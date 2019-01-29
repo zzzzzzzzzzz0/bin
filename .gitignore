@@ -1,0 +1,5 @@
+*.o
+*.d
+_arg.zs
+*.zs-start*
+.project

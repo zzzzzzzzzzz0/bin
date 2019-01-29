@@ -1,0 +1,6 @@
+模块“gtkmain库”。
+赋予“句柄”【私】以函数集“‘参数0’.so”。
+
+函数“gtk-init-check”以“gtk_init_check__”、‘句柄’、“i-Z”。
+函数“gtk-main”以“gtk_main__”、‘句柄’。
+函数“gtk-main-quit”以“gtk_main_quit__”、‘句柄’。

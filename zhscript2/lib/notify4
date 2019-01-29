@@ -1,0 +1,9 @@
+模块“notify库”。
+赋予“句柄”【私】以函数集“libnotify.so”、“libnotify.so.1”、“libnotify.so.4”。
+
+函数“通知域应用”以“notify_init”、‘句柄’、“i-c*”（app_name）。
+函数“notify_uninit”以“notify_uninit”、‘句柄’。
+函数“通知域新增”以“notify_notification_new”、‘句柄’、“&-c*-c*-c*-${l0}”（summary、body、icon（NULL））。
+函数“通知域显示”以“notify_notification_show”、‘句柄’、“i-&-${l0}”。
+函数“通知域时间”以“notify_notification_set_timeout”、‘句柄’、“-&-i”（、timeout）。
+函数“通知域整值”以“notify_notification_set_hint_int32”、‘句柄’、“-&-c*-i”（、key、value）。

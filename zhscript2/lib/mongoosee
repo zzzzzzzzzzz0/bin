@@ -1,0 +1,12 @@
+模块“mongoosee库”。
+赋予“句柄”【私】以函数集“‘参数0’.so”。
+
+调用先函数以“init__”、‘句柄’、“-$this-$main-$cbx-$qvnew-$qvdel-$varnew2-$mksuidao-$err-$errclear”了。
+
+函数“网页服务”以“server__”、‘句柄’、“-c*-c*-i-V”（侦听地址、站根目录、循环。返回错、服务）。
+函数“转动网页服务”以“mg_mgr_poll”、‘句柄’、“l-&-i”（time_t (struct mg_mgr *, int milli)）。
+函数“停止网页服务”以“mg_mgr_free”、‘句柄’、“-&”。
+
+函数“设上传目录”以“uploadir__”、‘句柄’、“-c*”（默认/tmp）。
+
+函数“抓网页”以“web_get__”、‘句柄’、“-c*-V”（url）。

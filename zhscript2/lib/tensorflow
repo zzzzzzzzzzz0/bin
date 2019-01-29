@@ -1,0 +1,91 @@
+模块‘参数0’。
+赋予“句柄”【私】以函数集‘参数1’“libtensorflow.so”。
+
+函数“版本”以“TF_Version”、‘句柄’、“c*”。
+
+函数“新图”以“TF_NewGraph”、‘句柄’、“&”。
+函数“删图”以“TF_DeleteGraph”、‘句柄’、“-&”。
+函数“新图导项”以“TF_NewImportGraphDefOptions”、‘句柄’、“&”。
+函数“删图导项”以“TF_DeleteImportGraphDefOptions”、‘句柄’、“-&”。
+函数“图导”以“TF_GraphImportGraphDef”、‘句柄’、“-&-&-&-&”。
+
+函数“新话选”以“TF_NewSessionOptions”、‘句柄’、“&”。
+函数“删话选”以“TF_DeleteSessionOptions”、‘句柄’、“-&”。
+
+函数“新态”以“TF_NewStatus”、‘句柄’、“&”。
+函数“删态”以“TF_DeleteStatus”、‘句柄’、“-&”。
+函数“态码”以“TF_GetCode”、‘句柄’、“i-&”。
+函数“态信息”以“TF_Message”、‘句柄’、“c*-&”。
+
+函数“新话”以“TF_NewSession”、‘句柄’、“&-&-&-&”。
+函数“删话”以“TF_DeleteSession”、‘句柄’、“-&-&”。
+函数“关话”以“TF_CloseSession”、‘句柄’、“-&-&”。
+
+函数“TF_NewOperation”以、‘句柄’、“&-&-c*-c*”。
+赋予“TF_FLOAT”以“1”。
+函数“TF_SetAttrType”以、‘句柄’、“-&-c*-i”。
+函数“TF_SetAttrTensor”以、‘句柄’、“-&-c*-&-&”。
+函数“TF_TensorType”以、‘句柄’、“i-&”。
+函数“TF_FinishOperation”以、‘句柄’、“&-&-&”。
+函数“图操”以“TF_GraphOperationByName”、‘句柄’、“&-&-c*”。
+函数“TF_SessionRun”以、‘句柄’、“-&-&-&-&-i-&-&-i-&-i-&-&”。
+函数“TF_TensorData”以、‘句柄’、“&-&”。
+
+函数“删”以“TF_DeleteTensor”、‘句柄’、“-&”。
+函数“删存”以“TF_DeleteBuffer”、‘句柄’、“-&”。
+
+赋予“句柄2”【私】以函数集“‘参数0’.so”。
+调用先函数以“init__”、‘句柄2’、“-$this-$ex-&-&-&-&”了、
+	先函数以“TF_NewTensor”、‘句柄’了、
+	先函数以“TF_AddInputList”、‘句柄’了、‘TF_SessionRun’、
+	先函数以“TF_NewBuffer”、‘句柄’了。
+
+函数“数”以“float__”、‘句柄2’、“&-$ce-c*”。
+函数“add_list1__”以、‘句柄2’、“-$ce-&-Z”。
+函数“新进参”以“jincan__”、‘句柄2’、“&-Z”。
+函数“新出参”以“chucan__”、‘句柄2’、“&-i”。
+函数“出参果”以“chucan2__”、‘句柄2’、“&-&”。
+函数“数格”以“fmt__”、‘句柄2’、“-$ce-V-c*-Z”。
+函数“文件”以“file__”、‘句柄2’、“&-c*”。
+
+函数“新组”以“array2__”、‘句柄2’、“&-$ce-Z”。
+函数“删组”以“free_array2__”、‘句柄2’、“-Z”。
+函数“组长”以“array_length__”、‘句柄2’、“i-$ce-&”。
+函数“组员”以“array_o__”、‘句柄2’、“&-&”。
+函数“删一组”以“free_array__”、‘句柄2’、“-Z”。
+
+定义“新数”、“值”、“名”以下代码
+	赋予【上】如果存在“名”那么‘名’否则‘值’以调用‘数’、‘值’。
+上代码。
+定义“新”【不定】、“图”、“/”【隔】、“态”、“中点”【隔】、“名”、“类”以下代码
+	赋予“desc”以调用‘TF_NewOperation’、‘图’、分支‘类’先
+		“存”：“Placeholder”。
+		“固”：“Const”。
+		‘类’
+	了、‘名’。
+	分支‘类’先
+		“存”
+			调用‘TF_SetAttrType’、‘desc’、“dtype”、‘TF_FLOAT’。
+		“固”先
+			别名“值”以“参数5”。
+			调用‘TF_SetAttrTensor’、‘desc’、“value”、‘值’、‘态’。
+			调用‘TF_SetAttrType’、‘desc’、“dtype”、调用‘TF_TensorType’、‘值’。
+		了。
+		调用‘add_list1__’、‘desc’、‘参数栈5’
+	了。
+	赋予‘名’【上】以调用‘TF_FinishOperation’、‘desc’、‘态’。
+上代码。
+定义“新组”【不定】、“名”以下代码
+	赋予‘名’【上】以调用‘新组’、‘参数栈2’。
+上代码。
+
+定义“对”、“话”、“/”【隔】、“态”、“run_options”、
+“进”【隔】、“入组”、“进参”、
+“出”【隔】、“出组”、“出参”、
+“target_opers”、“ntargets”、“run_metadata”以下代码
+	调用‘TF_SessionRun’、‘话’、‘run_options’、
+		‘入组’、先调用‘组员’、‘进参’了、先调用‘组长’、‘进参’了、
+		‘出组’、先调用‘组员’、‘出参’了、先调用‘组长’、‘出参’了、
+		‘target_opers’、‘ntargets’、‘run_metadata’、‘态’。
+上代码。
+

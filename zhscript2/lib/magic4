@@ -1,0 +1,26 @@
+模块“文件类型库”、下代码
+	调用‘magic-close’、‘句柄2’。
+上代码。
+赋予“句柄”【私】以函数集“libmagic.so”、“libmagic.so.1”。
+
+函数“magic-open”以“magic_open”、‘句柄’、“l-i”。
+函数“magic-load”以“magic_load”、‘句柄’、“-l-l”。
+
+（MAGIC_SYMLINK 2 MAGIC_MIME_TYPE 16（0x10） MAGIC_ERROR 512（0x200））
+解释下代码
+	赋予“参”以“0”。
+	循环‘参数数目’“次”先
+		赋予“参”以算术‘参’“+”分支‘参数‘次’’先
+			“mime”：“16”。
+			‘参数‘次’’
+		了
+	了。
+	如果不‘参’那么赋予“参”以“2”。
+	赋予“句柄2”【上】【私】以调用‘magic-open’、‘参’。
+上代码、‘参数栈’。
+
+调用‘magic-load’、‘句柄2’、“0”。
+函数“得文件类型”以“magic_file”、‘句柄’、“c*-${l‘句柄2’}-c*”。
+
+函数“magic-file”以“magic_file”、‘句柄’、“c*-l-c*”。
+函数“magic-close”以“magic_close”、‘句柄’、“-l”。

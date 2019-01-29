@@ -1,0 +1,14 @@
+模块“拖放库”。
+赋予“句柄”【私】以函数集“‘参数0’.so”。
+
+调用先函数以“_api__”、‘句柄’、“-$0-$9-$19-$2-$3-$4-$13-$23-$17”了。
+
+（
+GDK_ACTION_DEFAULT 1
+GDK_ACTION_COPY    2 或 复制
+GDK_ACTION_MOVE    4 或 移动
+GDK_ACTION_LINK    8 或 链接
+GDK_ACTION_PRIVATE 16
+GDK_ACTION_ASK     32
+）
+函数“拖放加入”以“add2__”、‘句柄’、“-&-c*-c*”（、代码）。

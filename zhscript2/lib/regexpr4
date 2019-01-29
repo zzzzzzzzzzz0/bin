@@ -1,0 +1,41 @@
+模块“正则库”。
+赋予“句柄”【私】以函数集“‘参数0’.so”。
+
+调用先函数以“_init__”、‘句柄’、“-$0-$9-$19-$2-$3-$4-c*-c*”了、“数目”、“之”。
+
+函数“正则格”以“_regexpr__”、‘句柄’、“-E-A-S-Z”（
+src。源串、
+exp。正则表达式。默认([0-9]+)。linux版不支持\d、\s这样的简、
+fmt。输出的格式，%0至%f为对应的匹配，其他原样输出。默认%1、
+top。始条匹配，从1开始，0为无限制。默认0、
+btm。末条匹配。默认0
+）。
+
+函数“正则代”  以“_regexpreplace__”、‘句柄’、“-E-A-S-$l0-$l0-$l1-$ce-$1-c*-c*-c*-Z”（
+src、from、代码（传4个参数，参数1一般也是返回值，参数2、3是序号，参数4是偏移）
+（、
+cflags，默认e（e（REG_EXTENDED 更强大的扩展规则）、i（REG_ICASE 忽略大小写）、n（REG_NOSUB 不存储结果）、l（REG_NEWLINE 识别换行符，$尾^头））、
+eflags（e（REG_NOTEOL）、b（REG_NOTBOL））
+））。
+函数“正则迭”  以“_regexpreplace__”、‘句柄’、“-E-A-S-$l0-$l1-$l1-$ce-$1-c*-c*-c*-Z”（src、from、代码。传所有匹配参数（、cflags、eflags））。
+函数“正则选”  以“_regexpreplace__”、‘句柄’、“-E-A-S-$l0-$l1-$l0-$ce-$1-c*-c*-c*-Z”（src、from、代码（、cflags、eflags）。无选无返回）。
+函数“正则替”  以“_regexpreplace__”、‘句柄’、“-E-A-S-$l0-$l0-$l1-$l0-$l0-c*-c*-c*-Z”（src、from、to（、cflags、eflags））。
+函数“遍历正则”以“_regexpreplace__”、‘句柄’、“-E-A-S-$l1-$l1-$l1-$ce-$1-c*-c*-c*-Z”（src、from、代码（、cflags、eflags）。返回匹配数）。
+
+（把匹配的结果分配成形如“头之2之1”的多个变量，另有“头数目”、“头数目2”）
+函数“正则攫”以“_regexpr_get__”、‘句柄’、“-E-S-$1-c*-c*-Z”（
+src、exp。正则表达式
+（、
+变量头、
+是否只读，默认0。另：“-”将从此开启key/val模式、
+cflags，默认e、
+eflags、
+去掉重复，默认0
+））。
+
+函数“正则配”以“_regexpr_test__”、‘句柄’、“-S-c*-c*-Z”（
+、exp
+（、
+cflags，默认en、
+eflags
+））。
