@@ -224,10 +224,8 @@
 			function sou__() {
 				var code = '搜索文字';
 				var sou = __('sou').value;
-				if(sou == "") {
-					sou = z$('得选择');
-					__('sou').value = sou;
-				}
+				if(sou == "")
+					__('sou').value = sou = z$('得选择');
 				code += '”下代码‘参数1’上代码“';
 				if(__('sou-back').checked)
 					code += '、反向';
@@ -252,8 +250,8 @@
 			<input type=text id=sou>
 			<input type=button value="搜" onclick="sou__()">
 			<input type=button value="X" onclick="__('sou').value=''">
-			<input type=checkbox id=sou-back>反向 
-			<input type=checkbox id=sou-cs>大小写 
+			<input type=checkbox id=sou-back>反向
+			<input type=checkbox id=sou-cs>大小写
 			”先
 				调用‘迭代二’、下代码
 					“<input type=button value="到‘参数1’" onclick="z$('使#、光标位置、‘参数2’')">”
@@ -297,9 +295,10 @@
 				gg__(gg__(e)).value='“”';
 			}
 			function add_code__() {
+				add__(new_txt__("\n"), 'code');
 				var e = new__('span');
 				e.className = 'line1';
-				htm__(e, ' 
+				htm__(e, '
 					<input type=button value="-" onclick="del__(shangji__(this))">
 					<input type=text value="“”" size=15>
 					<input type=button value="插" onclick="code_ins__(this)">
@@ -308,7 +307,7 @@
 				add__(e, 'code');
 			}
 			</script>
-			代码
+			 &nbsp; 代码
 			<input type=button value="+" onclick="add_code__()">
 			<span id=code></span>
 			<script>add_code__()</script>”。
