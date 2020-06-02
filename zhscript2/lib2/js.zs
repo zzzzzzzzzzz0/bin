@@ -1,6 +1,11 @@
 模块“js函数集”。
 
 赋予“js函数集”以下原样
+if(!window.id__)
+	window.id__=
+	function(id){
+		return document.getElementById(id);
+	};
 if(!window.cls__)
 	window.cls__=
 	function(cls){
@@ -11,6 +16,11 @@ if(!window.tag__)
 	function(tag){
 		return document.getElementsByTagName(tag);
 	};
+if(!window.nm__)
+	window.nm__=
+	function(name){
+		return document.getElementsByName(name);
+	};
 if(!window.__)
 	window.__=
 	function(id){
@@ -20,13 +30,18 @@ if(!window.__)
 		default:
 			return id;
 		}
-		var e=document.getElementById(id);
-		if(!e){
-			var e1=cls__(id);
-			if(e1)
-				e=e1[0];
-		}
-		return e;
+		var e=id__(id);
+		if(e)
+			return e;
+		var a=cls__(id);
+		if(a&&a.length>0)
+			return a[0];
+		a=tag__(id);
+		if(a&&a.length>0)
+			return a[0];
+		a=nm__(id);
+		if(a&&a.length>0)
+			return a[0];
 	};
 if(!window.q_s_a__)
 	window.q_s_a__=

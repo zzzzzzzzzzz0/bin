@@ -6,7 +6,8 @@
 “jpg”、“JPEG image data,”、
 “png”、“PNG image data,”、
 “gif”、“GIF image data,”、
-“bmp”、“PC bitmap,”。
+“bmp”、“PC bitmap,”、
+“svg”、“SVG Scalable Vector Graphics image”。
 
 定义“是图片”、“路径”以下代码
 	加载“lib/magic4”。

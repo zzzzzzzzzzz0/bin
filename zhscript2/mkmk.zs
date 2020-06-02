@@ -10,7 +10,7 @@
 		赋予1【地】以‘1’‘径\’换行。
 	了。
 	赋予源目录以../../zhscript先分支‘主名’先
-		mongoosee、opencv：2-lib。
+		mongoosee、opencv、jiaem：2-lib。
 	了了/‘主名’。
 	赋予2【地】以‘2’“‘径’: $(call g__,‘源目录’”先分支‘主名’先
 		mongoosee 先
@@ -24,9 +24,11 @@
 	了了g先分支‘主名’先
 		gjk4、gtkmain4：cc。
 		++
-	了了“ $(call c__,$^) -o $@ $(f1_) ”先分支‘主名’先
-		mongoosee、opencv：-std=c++1y。
-		$(f_gg_)
+	了了“ $(call c__,$^) -o $@ $(f1”先分支‘主名’先
+		mongoosee、opencv、jiaem、wnck4：1。
+	了了_)先分支‘主名’先
+		mongoosee、opencv、jiaem：。
+		“ $(f_gg_)”
 	了了“ $(so_) ”先分支‘主名’先
 		clipboard4、dlg4、dnd4、gtkmain4、menu4：
 			“$(call p__,gtk+-3.0)”。
@@ -42,7 +44,7 @@
 		opencv 先
 			“-Wl,-rpath=/opt2/bin/lib -lX11 $(call p__,‘主名’)”。
 		了。
-		slave4：“$(call p__,glib-2.0 glibmm-2.4)”。
+		slave4：“$(call p__,glibmm-2.4)”（glib-2.0 sigc++-2.0）。
 		wnck4：“-DWNCK_I_KNOW_THIS_IS_UNSTABLE $(call p__,libwnck-3.0)”。
 	了了换行。
 	（
@@ -65,13 +67,7 @@
 		调用‘dir.end’、‘搜’。
 		显示‘1’‘12’换行‘2’换行。
 	上代码、
-	lib/、、b、下代码
-		赋予1、2、12以。
-		命名地。
-		1和2加‘参数1’。
-		显示‘1’‘12’换行‘2’换行。
-	上代码、
-	lib-、、0、下代码
+	lib/、、0、下代码
 		赋予1、2、12以。
 		命名地。
 		加载lib/regexpr4。
@@ -88,6 +84,7 @@
 	lib/gtkmain4.so \
 	lib/imagemagick4.so \
 	lib/inotify4.so \
+	lib/jiaem.so \
 	lib/menu4.so \
 	lib/mongoosee.so \
 	lib/opencv.so \
@@ -102,13 +99,33 @@
 		上代码。
 		显示‘1’‘12’换行‘2’换行。
 	上代码、
+	lib-、、b、下代码
+		赋予1、2、12以。
+		命名地。
+		1和2加‘参数1’。
+		显示‘1’‘12’换行‘2’换行。
+	上代码、
 	1、“执行“make depe””、0、、
+	先调用‘迭代三’、下代码
+		1‘参数1’、“执行“sudo apt install lib‘参数2’-dev””、0、、
+	上代码、2、a、glibmm-2.4、b、gtksourceview-4了
 	2、下代码
-		执行“make d=/tmp/zs20 f=-O3 ‘参数’”
+		调用‘命令行解析’、3、、、‘参数栈’
 	上代码、a、、
-	2b、下代码
-		调用‘命令行解析’、2、f_wk_=-Dver_u1704_
-	上代码、0、、
+	2c|2bb|2b|2a|2ba|3a|3b|3bb、下原样
+	调用‘命令行解析’、3、分支‘参数0’先
+		3a、3b、3bb：/media/sf_rw。
+	了、分支‘参数0’先
+		3a ：-6。
+		3bb：-9。
+	了、f_wk_=分支‘参数0’先
+		3bb、2bb、2b、2ba：-Dver_u1704_。
+		2a、2ba：“ -Dver_world_2_”。
+		3bb、2bb、2c：、al2。
+	了。上原样、0、、
+	3、下代码
+		执行显示“make d=‘参数1’/tmp/zs20‘参数2’ f=-O3 ‘参数栈3’”换行
+	上代码、a、、
 	x、“执行“make clean””、0、、
 	#、“执行 make”、h、。
 调用‘命令行解析’、‘参数栈’。

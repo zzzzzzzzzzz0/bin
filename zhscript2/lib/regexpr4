@@ -2,6 +2,7 @@
 赋予“句柄”【私】以函数集“‘参数0’.so”。
 
 调用先函数以“_init__”、‘句柄’、“-$0-$9-$19-$2-$3-$4-c*-c*”了、“数目”、“之”。
+调用先函数以“_init2__”、‘句柄’、“-$cbx3”了。
 
 函数“正则格”以“_regexpr__”、‘句柄’、“-E-A-S-Z”（
 src。源串、
@@ -21,6 +22,7 @@ eflags（e（REG_NOTEOL）、b（REG_NOTBOL））
 函数“正则选”  以“_regexpreplace__”、‘句柄’、“-E-A-S-$l0-$l1-$l0-$ce-$1-c*-c*-c*-Z”（src、from、代码（、cflags、eflags）。无选无返回）。
 函数“正则替”  以“_regexpreplace__”、‘句柄’、“-E-A-S-$l0-$l0-$l1-$l0-$l0-c*-c*-c*-Z”（src、from、to（、cflags、eflags））。
 函数“遍历正则”以“_regexpreplace__”、‘句柄’、“-E-A-S-$l1-$l1-$l1-$ce-$1-c*-c*-c*-Z”（src、from、代码（、cflags、eflags）。返回匹配数）。
+函数“正则取”以“_regexpr_get2__”、‘句柄’、“-E-V-$ce-$1-c*-c*-c*-i-Z”（src、from、代码、是否返回其他部分（、cflags、eflags））。
 
 （把匹配的结果分配成形如“头之2之1”的多个变量，另有“头数目”、“头数目2”）
 函数“正则攫”以“_regexpr_get__”、‘句柄’、“-E-S-$1-c*-c*-Z”（

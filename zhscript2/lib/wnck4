@@ -2,18 +2,22 @@
 赋予“句柄”【私】以函数集“‘参数0’.so”。
 
 调用先函数以“init__”、‘句柄’、“-$9-$0-$17-$23”了。
-函数“遍历”以“for__”、‘句柄’、“-E-$11-$1-c*-${*%lu}-&”（代码、屏）。
+函数“遍历二”以“for__”、‘句柄’、“-E-$11-$1-c*-i-${*%lu}-&”（代码、是否标活动区、屏）。
+函数“遍历”  以“for__”、‘句柄’、“-E-$11-$1-c*-${l1}-${*%lu}-&”（代码、屏）。
 
 函数“窗打开时”以“on_window_opened__”、‘句柄’、“-c*-&”（代码、屏）。
 函数“窗关闭时”以“on_window_closed__”、‘句柄’、“-c*-&”（代码、屏）。
+函数“窗名变时”以“on_name_changed__”、‘句柄’、“-c*-&”（代码、屏）。
 函数“区激活时”以“on_active_workspace_changed__”、‘句柄’、“-c*-&”（代码、屏）。
 
 函数“屏得”以“wnck_screen_get_default”、‘句柄’、“&”。
 函数“屏强更”以“wnck_screen_force_update”、‘句柄’、“-&”。
 函数“屏得宽”以“wnck_screen_get_width”、‘句柄’、“i-&”。
 函数“屏得高”以“wnck_screen_get_height”、‘句柄’、“i-&”。
+函数“屏得区数”以“wnck_screen_get_workspace_count”、‘句柄’、“i-&”。
 函数“屏得区”以“wnck_screen_get_workspace”、‘句柄’、“&-&-i”。
 函数“屏得激活区”以“wnck_screen_get_active_workspace”、‘句柄’、“&-&”。
+函数“屏得近激活窗”以“wnck_screen_get_previously_active_window”、‘句柄’、“&-&”。
 函数“窗得”以“wnck_window_get”、‘句柄’、“&-lu”。
 函数“窗得名”以“wnck_window_get_name”、‘句柄’、“c*-&”。
 函数“窗得xid”以“wnck_window_get_xid”、‘句柄’、“lu-&”。
@@ -27,18 +31,22 @@
 函数“窗设几何”以“window_set_geometry__”、‘句柄’、“-B-&-c*-c*-c*-c*”（窗、x、y、宽、高。
 x另有一种逗号用法，x,y,宽,高，后三者为NULL则仅抽取而不使用，再而y为逗号用法的话，x1=(w2-w1)/x2;y1=(h2-h1)/y2;）。
 函数“窗激活”以“wnck_window_activate”、‘句柄’、“-&”（、“${l0}”）。
+函数“窗是激活”以“wnck_window_is_active”、‘句柄’、“i-&”。
 函数“窗关闭”以“wnck_window_close”、‘句柄’、“-&”（、“${l0}”）。
 函数“窗最大化”以“wnck_window_maximize”、‘句柄’、“i-&”。
+函数“窗撤最大化”以“wnck_window_unmaximize”、‘句柄’、“i-&”。
 函数“窗是最大化”以“wnck_window_is_maximized”、‘句柄’、“i-&”。
 函数“窗最小化”以“wnck_window_minimize”、‘句柄’、“-&”。
+函数“窗撤最小化”以“wnck_window_unminimize”、‘句柄’、“-&”。
 函数“窗是最小化”以“wnck_window_is_minimized”、‘句柄’、“i-&”。
 函数“窗置顶”以“wnck_window_make_above”、‘句柄’、“-&”。
 函数“窗撤置顶”以“wnck_window_unmake_above”、‘句柄’、“-&”。
 函数“窗是置顶”以“wnck_window_is_above”、‘句柄’、“i-&”。
+函数“窗全屏”以“wnck_window_set_fullscreen”、‘句柄’、“-&-i”。
 函数“窗设跳过任务栏”以“wnck_window_set_skip_tasklist”、‘句柄’、“-&-i”。
-函数“窗移区”以“wnck_window_move_to_workspace”、‘句柄’、“-&-&”。
 
-函数“区得”以“wnck_window_get_workspace”、‘句柄’、“&-&”。
+函数“窗得区”以“wnck_window_get_workspace”、‘句柄’、“&-&”。
+函数“窗移区”以“wnck_window_move_to_workspace”、‘句柄’、“-&-&”。
 函数“区激活”以“wnck_workspace_activate”、‘句柄’、“-&”（、“${l0}”）。
 函数“区得号”以“wnck_workspace_get_number”、‘句柄’、“i-&”。
 
@@ -46,5 +54,7 @@ x另有一种逗号用法，x,y,宽,高，后三者为NULL则仅抽取而不使�
 函数“是露桌面”以“wnck_screen_get_showing_desktop”、‘句柄’、“i-&”。
 
 函数“总在可见工作区”以“wnck_window_stick”、‘句柄’、“-&”。
+函数“撤总在可见工作区”以“wnck_window_unstick”、‘句柄’、“-&”。
+函数“是总在可见工作区”以“wnck_window_is_sticky”、‘句柄’、“i-&”。
 函数“窗口垂直向最大化”以“wnck_window_maximize_vertically”、‘句柄’、“i-&”。
 函数“窗口水平向最大化”以“wnck_window_maximize_horizontally”、‘句柄’、“i-&”。

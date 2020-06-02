@@ -1,11 +1,12 @@
 d := .
 tag_ := $d/l4.so $d/zhscript2 \
 	$d/gtksh \
-	$d/gtksh-plugin/webkit/webkit.so \
 	$d/gtksh-plugin/src.so \
 	$d/gtksh-plugin/vte.so \
 	$d/gtksh-plugin/cairog.so \
-	$d/l $d/webkitsh $d/vtesh $d/srcvwsh $d/cairogsh \
+	$d/gtksh-plugin/webkit/webkit.so \
+	$d/gtksh-plugin/wnck_pager.so \
+	$d/l $d/vtesh $d/srcvwsh $d/cairogsh \
 	\
 	$d/lib/clipboard4.so \
 	$d/lib/clpars4.so \
@@ -19,6 +20,7 @@ tag_ := $d/l4.so $d/zhscript2 \
 	$d/lib/gtkmain4.so \
 	$d/lib/imagemagick4.so \
 	$d/lib/inotify4.so \
+	$d/lib/jiaem.so \
 	$d/lib/menu4.so \
 	$d/lib/mongoosee.so \
 	$d/lib/redireconsoi4.so \
@@ -29,19 +31,26 @@ tag_ := $d/l4.so $d/zhscript2 \
 	$d/lib/wnck4.so \
 	$d/lib/opencv.so \
 
+tag2_ := \
+	$d/webkitsh \
+
+
 d_o_ := $d
 o1_ := $(d_o_)/_4_s_f_c
 
-all: mkdir $(tag_)
+all: mkdir $(tag_) $(tag2_)
+al2: mkdir $(tag_)
 mkdir:
 	mkdir -p $d/lib $d/gtksh-plugin/webkit
 clean:
-	rm -f $(tag_) $(d_o_)/*.o
+	rm -f $(tag_) $(tag2_) $(d_o_)/*.o
 depe:
 	sudo apt-get install g++ pkg-config \
 	libgtk-3-dev libwebkit2gtk-4.0-dev libgtksourceview-3.0-dev libvte-2.91-dev \
+	libmagick++-dev libwnck-3-dev \
+	
+	sudo apt-get install \
 	webkitgtk-3.0-dev \
-	libmagick++-dev libglibmm-2.4-dev libwnck-3-dev \
 
 f := -O0 -g3
 f1b_ := -Wall -fmessage-length=0
@@ -89,6 +98,8 @@ $d/gtksh-plugin/vte.so: $(call g__,../../zhscript2-sh/gtksh/plugin/vte)
 	g++ $(call c__,$^) -o $@ $(f11_) $(so_) $(call p__,gtk+-3.0 vte-2.91)
 $d/gtksh-plugin/cairog.so: $(call g__,../../zhscript2-sh/gtksh/plugin/cairog)
 	g++ $(call c__,$^) -o $@ $(f11_) $(so_) $(call p__,gtk+-3.0)
+$d/gtksh-plugin/wnck_pager.so: $(call g__,../../zhscript2-sh/gtksh/plugin/wnck_pager)
+	g++ $(call c__,$^) -o $@ $(f11_) $(so_) -DWNCK_I_KNOW_THIS_IS_UNSTABLE $(call p__,libwnck-3.0)
 
 f_gg_ := -I../../zhscript/new_gg
 
@@ -117,26 +128,28 @@ $d/lib/imagemagick4.so: $(call g__,../../zhscript/imagemagick4)
 	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) $(call p__,Magick++) $(f_im_)
 $d/lib/inotify4.so: $(call g__,../../zhscript/inotify4)
 	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) 
+$d/lib/jiaem.so: $(call g__,../../zhscript2-lib/jiaem)
+	g++ $(call c__,$^) -o $@ $(f11_) $(so_) 
 $d/lib/menu4.so: $(call g__,../../zhscript/menu4)
 	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) $(call p__,gtk+-3.0)
 $d/lib/mongoosee.so: $(call g__,../../zhscript2-lib/mongoosee,-a ! -name *.c) $(d_o_)/_l_m_m.o
-	g++ $(call c__,$^) -o $@ $(f1_) -std=c++1y $(so_) -DMG_INTERNAL=
+	g++ $(call c__,$^) -o $@ $(f11_) $(so_) -DMG_INTERNAL=
 $(d_o_)/_l_m_m.o: ../../zhscript2-lib/mongoosee/mongoose.c ../../zhscript2-lib/mongoosee/mongoose.h
 	gcc $(call c__,$^) -o $@ -std=c11 $(f1b_) $f -c -fPIC -DMG_INTERNAL=
 $d/lib/opencv.so: $(call g__,../../zhscript2-lib/opencv)
-	export PKG_CONFIG_PATH=/opt2/bin/lib/pkgconfig && g++ $(call c__,$^) -o $@ $(f1_) -std=c++1y $(so_) -Wl,-rpath=/opt2/bin/lib -lX11 $(call p__,opencv)
+	export PKG_CONFIG_PATH=/opt2/bin/lib/pkgconfig && g++ $(call c__,$^) -o $@ $(f11_) $(so_) -Wl,-rpath=/opt2/bin/lib -lX11 $(call p__,opencv)
 $d/lib/redireconsoi4.so: $(call g__,../../zhscript/redireconsoi4)
 	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) 
 $d/lib/regexpr4.so: $(call g__,../../zhscript/regexpr4)
 	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) 
 $d/lib/slave4.so: $(call g__,../../zhscript/slave4)
-	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) $(call p__,glib-2.0 glibmm-2.4)
+	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) $(call p__,glibmm-2.4)
 $d/lib/timer4.so: $(call g__,../../zhscript/timer4)
 	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) 
 $d/lib/txtotxt4.so: $(call g__,../../zhscript/txtotxt4)
 	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) 
 $d/lib/wnck4.so: $(call g__,../../zhscript/wnck4)
-	g++ $(call c__,$^) -o $@ $(f1_) $(f_gg_) $(so_) -DWNCK_I_KNOW_THIS_IS_UNSTABLE $(call p__,libwnck-3.0)
+	g++ $(call c__,$^) -o $@ $(f11_) $(f_gg_) $(so_) -DWNCK_I_KNOW_THIS_IS_UNSTABLE $(call p__,libwnck-3.0)
 # up
 
 $d/l: $(call g__,../../zhscript/new_l/l32)
